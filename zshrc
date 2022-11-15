@@ -1,11 +1,14 @@
-source /usr/local/share/antigen/antigen.zsh
 
+source $(brew --prefix)/share/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 for file in $HOME/.{aliases,exports}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
+
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 
 antigen bundle git
 antigen bundle sudo
@@ -27,10 +30,12 @@ eval "$(direnv hook zsh)"
 
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
 
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
-
 [ -f "$GCLOUD_DIR/path.zsh.inc" ] && source "$GCLOUD_DIR/path.zsh.inc"
 [ -f "$GCLOUD_DIR/completion.zsh.inc" ] && source "$GCLOUD_DIR/completion.zsh.inc"
 
 source "$HOME/.antigen/bundles/lukechilds/zsh-better-npm-completion/zsh-better-npm-completion.plugin.zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+pokemonsay 'Have a nice day'
+

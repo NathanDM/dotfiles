@@ -1,2 +1,2 @@
-alias ia="open $1 -a /Applications/iA\ Writer.app"
-alias opus="$HOME/Workspace/opus-cli/dist/cli.js"
+alias givepair='gwip && ggpush -f --no-verify'
+alias takepair='git dammit && gunwip'

@@ -2,7 +2,7 @@ export LC_ALL="en_US.UTF-8"
 export VISUAL="vim"
 export EDITOR="$VISUAL"
 export GPG_TTY=$(tty)
-export DEFAULT_USER="tiste"
+export DEFAULT_USER="ndamie"
 export PATH="$PATH:$HOME/.rvm/bin"
 export NVM_DIR="$HOME/.nvm"
 
@@ -19,3 +19,4 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"

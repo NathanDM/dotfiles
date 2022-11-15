@@ -37,6 +37,7 @@ for file in "${FILES_TO_SYMLINK[@]}"; do
 done
 
 create_link "$PWD/prefs/sublime-text.json" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+create_link "$PWD/karabiner.json" "$HOME/.config/karabiner"
 create_link "$PWD/Brewfile" "$HOME/Brewfile"
 
 echo ""
