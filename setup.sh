@@ -32,9 +32,12 @@ fi
 declare -a FILES_TO_SYMLINK
 FILES_TO_SYMLINK=($(find . -type f -maxdepth 1 -not -name .editorconfig -not -name .gitignore -not -name README.md -not -name Brewfile -not -name "*.sh" | sed -e "s|./||"))
 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 for file in "${FILES_TO_SYMLINK[@]}"; do
     create_link "$PWD/$file" "$HOME/.$file"
 done
+
 
 create_link "$PWD/prefs/sublime-text.json" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
 create_link "$PWD/karabiner.json" "$HOME/.config/karabiner"

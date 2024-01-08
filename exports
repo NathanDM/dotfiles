@@ -2,7 +2,7 @@ export LC_ALL="en_US.UTF-8"
 export VISUAL="vim"
 export EDITOR="$VISUAL"
 export GPG_TTY=$(tty)
-export DEFAULT_USER="ndamie"
+export DEFAULT_USER="Mac-Z19NDAMI"
 export PATH="$PATH:$HOME/.rvm/bin"
 export NVM_DIR="$HOME/.nvm"
 

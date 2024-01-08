@@ -1,4 +1,4 @@
-
+eval "$(/opt/homebrew/bin/brew shellenv)"
 source $(brew --prefix)/share/antigen/antigen.zsh
 antigen use oh-my-zsh
 
@@ -7,8 +7,9 @@ for file in $HOME/.{aliases,exports}; do
 done
 unset file
 
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+export NVM_DIR="$HOME/.nvm"
+    [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+    [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
 
 antigen bundle git
 antigen bundle sudo
